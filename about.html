@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,25 +16,28 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
-      
+
         /* The mobile menu toggle logic */
         #mobile-menu-toggle {
-            display: none; 
+            display: none;
         }
-        
-        #mobile-menu-toggle:checked ~ header #mobile-menu {
+
+        #mobile-menu-toggle:checked~header #mobile-menu {
             display: block;
         }
 
-        #mobile-menu-toggle:checked ~ header #menu-icon {
+        #mobile-menu-toggle:checked~header #menu-icon {
             display: none;
         }
-        #mobile-menu-toggle:not(:checked) ~ header #close-icon {
+
+        #mobile-menu-toggle:not(:checked)~header #close-icon {
             display: none;
         }
+
         .node-card {
             min-width: 250px;
         }
+
         .organogram-container {
             position: relative;
         }
@@ -45,7 +49,8 @@
             top: 0;
             left: 50%;
             height: 2rem;
-            border-left: 2px solid #4b5563; /* Gray-700 */
+            border-left: 2px solid #4b5563;
+            /* Gray-700 */
             transform: translateX(-50%);
         }
 
@@ -56,45 +61,53 @@
             justify-content: center;
             padding-top: 2rem;
         }
+
         .executive-team-wrapper::before {
             content: '';
             position: absolute;
             top: 0;
             left: 50%;
             height: 2rem;
-            border-left: 2px solid #4b5563; /* Gray-700 */
+            border-left: 2px solid #4b5563;
+            /* Gray-700 */
             transform: translateX(-50%);
         }
+
         .executive-team-wrapper::after {
             content: '';
             position: absolute;
             top: 2rem;
             left: 0;
             right: 0;
-            border-top: 2px solid #4b5563; /* Gray-700 */
+            border-top: 2px solid #4b5563;
+            /* Gray-700 */
         }
-        
+
         /* The horizontal line for department sections */
         .departments-wrapper {
             position: relative;
             padding-top: 2rem;
         }
+
         .departments-wrapper::before {
             content: '';
             position: absolute;
             top: -48px;
             left: 60%;
             height: 5rem;
-            border-left: 2px solid #4b5563; /* Gray-700 */
+            border-left: 2px solid #4b5563;
+            /* Gray-700 */
             transform: translateX(-50%);
         }
+
         .departments-wrapper::after {
             content: '';
             position: absolute;
             top: 2rem;
             left: 0;
             right: 0;
-            border-top: 2px solid #4b5563; /* Gray-700 */
+            border-top: 2px solid #4b5563;
+            /* Gray-700 */
         }
 
         /* Connectors for individual cards within a section */
@@ -102,17 +115,20 @@
             position: relative;
             padding-top: 2rem;
         }
+
         .node-card-wrapper::before {
             content: '';
             position: absolute;
             top: 0;
             left: 50%;
             height: 2rem;
-            border-left: 2px solid #4b5563; /* Gray-700 */
+            border-left: 2px solid #4b5563;
+            /* Gray-700 */
             transform: translateX(-50%);
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
     <!-- A hidden checkbox to control the mobile menu via CSS -->
@@ -122,24 +138,40 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex">
-                <img src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-agriculture-logo-template-farm-logo-template-png-image_5180811.jpg" class="w-24 h-24 sm:w-22 sm:h-22 rounded-full  object-cover shadow-md">
+                <img src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-agriculture-logo-template-farm-logo-template-png-image_5180811.jpg"
+                    class="w-24 h-24 sm:w-22 sm:h-22 rounded-full  object-cover shadow-md">
                 <a href="index.html" class="text-2xl font-bold text-green-600 mt-8 ml-2">
                     GreenField Farms
                 </a>
             </div>
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="nav-link text-gray-600 hover:text-green-600 border-b-2 border-transparent hover:border-green-500 pb-1 transition">Home</a>
-                <a href="about.html" class="nav-link text-green-600 font-semibold border-b-2 border-green-500 pb-1 transition">About Us</a>
-                <a href="organisational.html" class="nav-link text-gray-600 hover:text-green-600 border-b-2 border-transparent hover:border-green-500 pb-1 transition">Organisational Page</a>
-                <a href="contact.html" class="nav-link text-gray-600 hover:text-green-600 border-b-2 border-transparent hover:border-green-500 pb-1 transition">Contact Us</a>
+                <a href="index.html"
+                    class="nav-link text-gray-600 hover:text-green-600 border-b-2 border-transparent hover:border-green-500 pb-1 transition">Home</a>
+                <a href="about.html"
+                    class="nav-link text-green-600 font-semibold border-b-2 border-green-500 pb-1 transition">About
+                    Us</a>
+                <a href="organisational.html"
+                    class="nav-link text-gray-600 hover:text-green-600 border-b-2 border-transparent hover:border-green-500 pb-1 transition">Organisational
+                    Page</a>
+                <a href="contact.html"
+                    class="nav-link text-gray-600 hover:text-green-600 border-b-2 border-transparent hover:border-green-500 pb-1 transition">Contact
+                    Us</a>
             </div>
             <!-- Mobile Menu Toggle Button -->
             <label for="mobile-menu-toggle" class="md:hidden text-gray-600 focus:outline-none cursor-pointer">
                 <!-- Menu Icon (for when menu is closed) -->
-                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
                 <!-- Close Icon (for when menu is open) -->
-                <svg id="close-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg id="close-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </label>
         </nav>
         <!-- Mobile Navigation Menu -->
@@ -163,16 +195,25 @@
                 </div>
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <img src="https://media.npr.org/assets/img/2017/12/15/farm_custom-067ab521b2f5c7918fd08de8083bb7005a39e19c.jpg" class="rounded-lg shadow-2xl" alt="A farmer standing in a green field at sunset" onerror="this.onerror=null;this.src='https://placehold.co/800x600/cccccc/ffffff?text=Image+Not+Found';">
+                        <img src="https://media.npr.org/assets/img/2017/12/15/farm_custom-067ab521b2f5c7918fd08de8083bb7005a39e19c.jpg"
+                            class="rounded-lg shadow-2xl" alt="A farmer standing in a green field at sunset"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/cccccc/ffffff?text=Image+Not+Found';">
                     </div>
                     <div class="md:w-1/2">
                         <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
                         <p class="text-gray-600 mb-4">
-                            GreenField Farms was founded in 1985 by James and Eleanor Davis with a simple mission: to cultivate healthy food in a way that respects the environment. We've been a family-run operation from the very beginning, dedicated to a heritage of organic farming. We believe that the most flavorful and nutritious food comes directly from healthy soil and a thriving, balanced ecosystem.
+                            GreenField Farms was founded in 1985 by James and Eleanor Davis with a simple mission: to
+                            cultivate healthy food in a way that respects the environment. We've been a family-run
+                            operation from the very beginning, dedicated to a heritage of organic farming. We believe
+                            that the most flavorful and nutritious food comes directly from healthy soil and a thriving,
+                            balanced ecosystem.
                         </p>
                         <h3 class="text-2xl font-semibold mb-4 mt-6">Our Mission</h3>
                         <p class="text-gray-600">
-                            Our mission is to provide our community with the freshest, most nutritious produce possible while acting as responsible stewards of the land. We are committed to sustainable practices, fostering biodiversity, and strengthening the vital connection between people and the food they eat.
+                            Our mission is to provide our community with the freshest, most nutritious produce possible
+                            while acting as responsible stewards of the land. We are committed to sustainable practices,
+                            fostering biodiversity, and strengthening the vital connection between people and the food
+                            they eat.
                         </p>
                     </div>
                 </div>
@@ -184,46 +225,66 @@
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row-reverse items-center gap-12">
                     <div class="md:w-1/2">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP3g5Vmpy4HPgm67doXEHAWJqNLsWuMssLQWBogKhplKh2znQQoOszB1kOHcZmsi-R-_0&usqp=CAU" class="rounded-lg shadow-2xl w-full " alt="A lush field with rows of organic vegetables" onerror="this.onerror=null;this.src='https://placehold.co/800x600/cccccc/ffffff?text=Image+Not+Found';">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP3g5Vmpy4HPgm67doXEHAWJqNLsWuMssLQWBogKhplKh2znQQoOszB1kOHcZmsi-R-_0&usqp=CAU"
+                            class="rounded-lg shadow-2xl w-full " alt="A lush field with rows of organic vegetables"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/cccccc/ffffff?text=Image+Not+Found';">
                     </div>
                     <div class="md:w-1/2">
                         <h3 class="text-2xl font-semibold mb-4">Our Commitment to the Land</h3>
                         <p class="text-gray-600 mb-4">
-                            We practice regenerative agriculture to build healthy, nutrient-rich soil. This isn't just about avoiding chemicals; it's about actively improving the land's health. We use techniques like cover cropping, no-till farming, and integrated pest management to reduce our environmental impact and create a thriving ecosystem on our farm. Our dedication to these methods ensures that every vegetable and fruit we grow is bursting with natural flavor.
+                            We practice regenerative agriculture to build healthy, nutrient-rich soil. This isn't just
+                            about avoiding chemicals; it's about actively improving the land's health. We use techniques
+                            like cover cropping, no-till farming, and integrated pest management to reduce our
+                            environmental impact and create a thriving ecosystem on our farm. Our dedication to these
+                            methods ensures that every vegetable and fruit we grow is bursting with natural flavor.
                         </p>
                         <p class="text-gray-600">
-                            From the moment a seed is planted to the day it's harvested, our focus is on quality and integrity. We believe that a healthy farm creates healthy food, and healthy food creates a healthier community.
+                            From the moment a seed is planted to the day it's harvested, our focus is on quality and
+                            integrity. We believe that a healthy farm creates healthy food, and healthy food creates a
+                            healthier community.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-         <!-- Our Products Section -->
-         <div class="py-16 bg-white">
+        <!-- Our Products Section -->
+        <div class="py-16 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-2">Our Fresh Produce</h2>
                 <p class="text-gray-600 mb-12">Grown with care, harvested with love.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Product Card 1 -->
-                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?q=80&w=2070&auto=format&fit=crop" alt="A basket of fresh organic vegetables" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                    <div
+                        class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?q=80&w=2070&auto=format&fit=crop"
+                            alt="A basket of fresh organic vegetables" class="w-full h-56 object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Organic Vegetables</h3>
-                            <p class="text-gray-600">A wide variety of seasonal vegetables, grown without synthetic pesticides or fertilizers.</p>
+                            <p class="text-gray-600">A wide variety of seasonal vegetables, grown without synthetic
+                                pesticides or fertilizers.</p>
                         </div>
                     </div>
                     <!-- Product Card 2 -->
-                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=1974&auto=format&fit=crop" alt="An assortment of fresh fruits including berries and citrus" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                    <div
+                        class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=1974&auto=format&fit=crop"
+                            alt="An assortment of fresh fruits including berries and citrus"
+                            class="w-full h-56 object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Fresh Fruits</h3>
-                            <p class="text-gray-600">Juicy and delicious fruits, picked at the peak of ripeness for maximum flavor.</p>
+                            <p class="text-gray-600">Juicy and delicious fruits, picked at the peak of ripeness for
+                                maximum flavor.</p>
                         </div>
                     </div>
                     <!-- Product Card 3 -->
-                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=1974&auto=format&fit=crop" alt="A carton of fresh brown and white farm eggs" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
+                    <div
+                        class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=1974&auto=format&fit=crop"
+                            alt="A carton of fresh brown and white farm eggs" class="w-full h-56 object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found';">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2">Farm-Fresh Eggs</h3>
                             <p class="text-gray-600">Rich, flavorful eggs from our free-range, happy chickens.</p>
@@ -233,140 +294,182 @@
             </div>
         </div>
 
-     <!-- Stats Section -->
-     <section id="stats" class="py-36 px-auto">
-        <h2 class="text-4xl font-extrabold text-center mb-12">Our Success By The Numbers</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-20">
-            <!-- Stat Card 1 -->
-            <div class="bg-green-600 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
-                <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-5v-10h5m4-3a2 2 0 100-4h-4a2 2 0 100 4m0 0a2 2 0 100 4m0-4h-4a2 2 0 100 4m0-4h-4a2 2 0 100 4"></path>
-                </svg>
-                <span class="text-5xl font-extrabold">10M+</span>
-                <span class="text-xl font-medium mt-2">Active Users</span>
-            </div>
-            <!-- Stat Card 2 -->
-            <div class="bg-white text-green-600 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
-                <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.956c-2.31 0-4.542.879-6.218 2.554L2.83 8.283a1 1 0 00-.012 1.414l7.07 7.07a1 1 0 001.414 0l7.07-7.07a1 1 0 00-.012-1.414l-4.71-4.71z"></path>
-                </svg>
-                <span class="text-5xl font-extrabold">99%</span>
-                <span class="text-xl font-medium mt-2">Satisfaction Rate</span>
-            </div>
-            <!-- Stat Card 3 -->
-            <div class="bg-green-600 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
-                <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2z"></path><path d="M20 18c0 2.21-3.582 4-8 4s-8-1.79-8-4 3.582-4 8-4 8 1.79 8 4z"></path><path d="M12 8v12m0-12a8 8 0 100-16 8 0 000 16z"></path>
-                </svg>
-                <span class="text-5xl font-extrabold">4.8/5</span>
-                <span class="text-xl font-medium mt-2">Average Rating</span>
-            </div>
-            <!-- Stat Card 4 -->
-            <div class="bg-white text-green-600 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
-                <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7-6a2 2 0 100 4m0 0a2 2 0 100 4"></path>
-                </svg>
-                <span class="text-5xl font-extrabold">50+</span>
-                <span class="text-xl font-medium mt-2">Countries</span>
-            </div>
-            <!-- Stat Card 5 -->
-            <div class="bg-green-600 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
-                <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10V9a1 1 0 00-1-1h-2m2 2h2m-2 0a2 2 0 100 4m0-4h2a2 2 0 110 4M9 14h2a2 2 0 100-4m0 0H9a2 2 0 100 4M12 12v6m0 0a2 2 0 100-4 2 0 000 4z"></path>
-                </svg>
-                <span class="text-5xl font-extrabold">500K+</span>
-                <span class="text-xl font-medium mt-2">Acres of Farmland Supported</span>
-            </div>
-              <!-- Stat Card 6 -->
-              <div class="bg-white text-green-600 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
-                <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293L19.707 8.293a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-                <span class="text-5xl font-extrabold">1000+</span>
-                <span class="text-xl font-medium mt-2">Successful Projects</span>
-            </div>
-        </div>
-    </section>
-
-            <div class="bg-gray-100 text-gray-800 p-4 sm:p-8">
-
-                <div class="container mx-auto organogram-container">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl font-bold mb-2">
-                            <span class="text-green-600">🌾</span> Our Business Organogram
-                        </h2>
-                        <p class="text-lg text-gray-600">A look at the structure that powers our sustainable growth.</p>
-                    </div>
-            
-                    <div class="relative z-10 flex flex-col items-center">
-                        <!-- Executive Leadership Section -->
-                        <section class="mb-12 w-full">
-                            <h2 class="text-2xl font-bold text-center text-gray-900 mb-6">
-                                <span class="text-orange-500">🏢</span> Executive Leadership
-                            </h2>
-                            <!-- CEO Card -->
-                            <div id="ceo" class="flex justify-center ">
-                                <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
-                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Executive Officer (CEO)</h3>
-                                    <p class="text-sm text-gray-500">Oversees overall strategy, partnerships, and growth.</p>
-                                </div>
-                            </div>
-                            <!-- Other Executive Cards with Connector Line -->
-                            <div class="executive-team-wrapper flex flex-wrap justify-center gap-6" id="executive-team">
-                                <div class="node-card-wrapper">
-                                    <div id="cto" class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
-                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Technology Officer (CTO)</h3>
-                                        <p class="text-sm text-gray-500">Leads website development, tech infrastructure, and innovation.</p>
-                                    </div>
-                                </div>
-                                <div class="node-card-wrapper">
-                                    <div id="coo" class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
-                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Operating Officer (COO)</h3>
-                                        <p class="text-sm text-gray-500">Manages day-to-day operations and team coordination.</p>
-                                    </div>
-                                </div>
-                                <div class="node-card-wrapper">
-                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-cyan-600 transform transition-transform duration-300 hover:scale-105">
-                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Legal Officer</h3>
-                                        <p class="text-sm text-gray-500">Ensures compliance with agricultural and digital laws.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-            
-                        <!-- Agricultural Operations Section -->
-                        <section class="mb-12 w-full departments-wrapper">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                                <div class="node-card-wrapper">
-                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-lime-600 transform transition-transform duration-300 hover:scale-105">
-                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Farm Manager</h3>
-                                        <p class="text-sm text-gray-500">Supervises crop production, livestock, and field staff.</p>
-                                    </div>
-                                </div>
-                                <div class="node-card-wrapper">
-                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-blue-600 transform transition-transform duration-300 hover:scale-105">
-                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">E-commerce Manager</h3>
-                                        <p class="text-sm text-gray-500">Oversees online sales, payment systems, and customer orders.</p>
-                                    </div>
-                                </div>
-                                <div class="node-card-wrapper">
-                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-lime-600 transform transition-transform duration-300 hover:scale-105">
-                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Supply Chain Manager</h3>
-                                        <p class="text-sm text-gray-500">Handles logistics, storage, and distribution of produce.</p>
-                                    </div>
-                                </div>
-                                <div class="node-card-wrapper">
-                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-cyan-600 transform transition-transform duration-300 hover:scale-105">
-                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Finance Manager</h3>
-                                        <p class="text-sm text-gray-500">Manages budgets, payroll, and financial reporting.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+        <!-- Stats Section -->
+        <section id="stats" class="py-36 px-auto">
+            <h2 class="text-4xl font-extrabold text-center mb-12">Our Success By The Numbers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-20">
+                <!-- Stat Card 1 -->
+                <div
+                    class="bg-green-600 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
+                    <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h-5v-10h5m4-3a2 2 0 100-4h-4a2 2 0 100 4m0 0a2 2 0 100 4m0-4h-4a2 2 0 100 4m0-4h-4a2 2 0 100 4">
+                        </path>
+                    </svg>
+                    <span class="text-5xl font-extrabold">10M+</span>
+                    <span class="text-xl font-medium mt-2">Active Users</span>
                 </div>
-            
+                <!-- Stat Card 2 -->
+                <div
+                    class="bg-white text-green-600 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
+                    <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.956c-2.31 0-4.542.879-6.218 2.554L2.83 8.283a1 1 0 00-.012 1.414l7.07 7.07a1 1 0 001.414 0l7.07-7.07a1 1 0 00-.012-1.414l-4.71-4.71z">
+                        </path>
+                    </svg>
+                    <span class="text-5xl font-extrabold">99%</span>
+                    <span class="text-xl font-medium mt-2">Satisfaction Rate</span>
+                </div>
+                <!-- Stat Card 3 -->
+                <div
+                    class="bg-green-600 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
+                    <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2z"></path>
+                        <path d="M20 18c0 2.21-3.582 4-8 4s-8-1.79-8-4 3.582-4 8-4 8 1.79 8 4z"></path>
+                        <path d="M12 8v12m0-12a8 8 0 100-16 8 0 000 16z"></path>
+                    </svg>
+                    <span class="text-5xl font-extrabold">4.8/5</span>
+                    <span class="text-xl font-medium mt-2">Average Rating</span>
+                </div>
+                <!-- Stat Card 4 -->
+                <div
+                    class="bg-white text-green-600 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
+                    <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 10h18M3 14h18m-9-4v8m-7-6a2 2 0 100 4m0 0a2 2 0 100 4"></path>
+                    </svg>
+                    <span class="text-5xl font-extrabold">50+</span>
+                    <span class="text-xl font-medium mt-2">Countries</span>
+                </div>
+                <!-- Stat Card 5 -->
+                <div
+                    class="bg-green-600 text-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
+                    <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 10V9a1 1 0 00-1-1h-2m2 2h2m-2 0a2 2 0 100 4m0-4h2a2 2 0 110 4M9 14h2a2 2 0 100-4m0 0H9a2 2 0 100 4M12 12v6m0 0a2 2 0 100-4 2 0 000 4z">
+                        </path>
+                    </svg>
+                    <span class="text-5xl font-extrabold">500K+</span>
+                    <span class="text-xl font-medium mt-2">Acres of Farmland Supported</span>
+                </div>
+                <!-- Stat Card 6 -->
+                <div
+                    class="bg-white text-green-600 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center transition-transform duration-300 transform hover:scale-105">
+                    <svg class="w-12 h-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293L19.707 8.293a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                    <span class="text-5xl font-extrabold">1000+</span>
+                    <span class="text-xl font-medium mt-2">Successful Projects</span>
+                </div>
             </div>
+        </section>
+
+        <div class="bg-gray-100 text-gray-800 p-4 sm:p-8">
+
+            <div class="container mx-auto organogram-container">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-2">
+                        <span class="text-green-600">🌾</span> Our Business Organogram
+                    </h2>
+                    <p class="text-lg text-gray-600">A look at the structure that powers our sustainable growth.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center">
+                    <!-- Executive Leadership Section -->
+                    <section class="mb-12 w-full">
+                        <h2 class="text-2xl font-bold text-center text-gray-900 mb-6">
+                            <span class="text-orange-500">🏢</span> Executive Leadership
+                        </h2>
+                        <!-- CEO Card -->
+                        <div id="ceo" class="flex justify-center ">
+                            <div
+                                class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
+                                <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Executive Officer (CEO)</h3>
+                                <p class="text-sm text-gray-500">Oversees overall strategy, partnerships, and growth.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Other Executive Cards with Connector Line -->
+                        <div class="executive-team-wrapper flex flex-wrap justify-center gap-6" id="executive-team">
+                            <div class="node-card-wrapper">
+                                <div id="cto"
+                                    class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Technology Officer (CTO)
+                                    </h3>
+                                    <p class="text-sm text-gray-500">Leads website development, tech infrastructure, and
+                                        innovation.</p>
+                                </div>
+                            </div>
+                            <div class="node-card-wrapper">
+                                <div id="coo"
+                                    class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Operating Officer (COO)
+                                    </h3>
+                                    <p class="text-sm text-gray-500">Manages day-to-day operations and team
+                                        coordination.</p>
+                                </div>
+                            </div>
+                            <div class="node-card-wrapper">
+                                <div
+                                    class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-cyan-600 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Legal Officer</h3>
+                                    <p class="text-sm text-gray-500">Ensures compliance with agricultural and digital
+                                        laws.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Agricultural Operations Section -->
+                    <section class="mb-12 w-full departments-wrapper">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="node-card-wrapper">
+                                <div
+                                    class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-lime-600 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Farm Manager</h3>
+                                    <p class="text-sm text-gray-500">Supervises crop production, livestock, and field
+                                        staff.</p>
+                                </div>
+                            </div>
+                            <div class="node-card-wrapper">
+                                <div
+                                    class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-blue-600 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">E-commerce Manager</h3>
+                                    <p class="text-sm text-gray-500">Oversees online sales, payment systems, and
+                                        customer orders.</p>
+                                </div>
+                            </div>
+                            <div class="node-card-wrapper">
+                                <div
+                                    class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-lime-600 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Supply Chain Manager</h3>
+                                    <p class="text-sm text-gray-500">Handles logistics, storage, and distribution of
+                                        produce.</p>
+                                </div>
+                            </div>
+                            <div class="node-card-wrapper">
+                                <div
+                                    class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-cyan-600 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Finance Manager</h3>
+                                    <p class="text-sm text-gray-500">Manages budgets, payroll, and financial reporting.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <!-- Footer Section -->
@@ -377,49 +480,44 @@
                 <!-- Company Info -->
                 <div class="flex flex-col items-center lg:items-start">
                     <div class=" flex  mb-2">
-                        <img src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-agriculture-logo-template-farm-logo-template-png-image_5180811.jpg" class="w-24 h-24 sm:w-22 sm:h-22 rounded-full  object-cover shadow-md">
+                        <img src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-agriculture-logo-template-farm-logo-template-png-image_5180811.jpg"
+                            class="w-24 h-24 sm:w-22 sm:h-22 rounded-full  object-cover shadow-md">
                         <h3 class="text-3xl mt-8 ml-3 font-bold text-white mb-4"> GreenField Farms</h3>
                     </div>
-                    <p class="text-gray-400 text-center lg:text-left">Cultivating a healthier future, one harvest at a time.</p>
+                    <p class="text-gray-400 text-center lg:text-left">Cultivating a healthier future, one harvest at a
+                        time.</p>
                     <div class="flex space-x-4 mt-6">
                         <!-- Social Media Icons (using SVG for styling) -->
                         <a href="#" class="text-gray-400 hover:text-green-500 transition-colors duration-200">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c-2.302.266-4.604-.45-6.79-1.391a15.823 15.823 0 011.69-3.41l.19.141a12.868 12.868 0 005.152 2.766c.28.053.56.096.842.133.29.04.58.07.87.09a2.72 2.72 0 01-1.353-.194c-.26-.08-.51-.184-.75-.312-.22-.124-.44-.265-.65-.417a2.12 2.12 0 01-1.025-1.298c-.14-.4-.25-.82-.32-1.25-.06-.43-.09-.87-.09-1.31a6.68 6.68 0 01.35-2.07c.1-.37.23-.74.39-1.1s.35-.71.55-1.05a11.3 11.3 0 012.35-3.32c.5-.4.99-.79 1.48-1.18a7.84 7.84 0 013.2-1.63c.53-.1.9-.17 1.2-.26.3-.08.57-.16.85-.23.28-.07.56-.13.84-.19l.19-.04a6.22 6.22 0 011.3-1.6c.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3a.5.5 0 01.5.5c0 .3-.1.6-.2.9s-.2.6-.3.9-.3.6-.4.9-.4.6-.5.9-.5.6-.6.9-.6.6-.7.9-.7.6-.8.9-.8.6-.9.9-.9.6-1 .9-1 .6-1.1.9-1.1.6-1.2.9-1.3.6-1.4.9-1.5.6-1.6.9a.5.5 0 01.5.5v.5c0 .2-.1.4-.2.6s-.2.4-.3.6-.3.4-.4.6-.4.4-.5.6-.5.4-.6.6-.6.4-.7.6-.7.4-.8.6-.8.4-.9.6-.9.4-1.1.6-1.1.4-1.2.6-1.2.4-1.3.6-1.4.4-1.5.6-1.6.4-1.7.6-1.8.4-1.9.6-2 .4-2.1.6-2.2.4-2.3.6a.5.5 0 01-.5.5c-.3-.2-.5-.4-.7-.6s-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6s-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6a.5.5 0 01-.5-.5v-1c0-.2.1-.4.2-.6s.2-.4.3-.6.3-.4.4-.6.4-.4.5-.6.5-.4.6-.6.6-.4.7-.6.7-.4.8-.6.8-.4.9-.6.9-.4 1.1-.6 1.1-.4 1.2-.6 1.2-.4 1.3-.6 1.4-.4 1.5-.6 1.6-.4 1.7-.6 1.8-.4 1.9-.6 2-.4 2.1-.6 2.2-.4 2.3-.6a.5.5 0 01.5.5zM12 21c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z" /></svg>
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c-2.302.266-4.604-.45-6.79-1.391a15.823 15.823 0 011.69-3.41l.19.141a12.868 12.868 0 005.152 2.766c.28.053.56.096.842.133.29.04.58.07.87.09a2.72 2.72 0 01-1.353-.194c-.26-.08-.51-.184-.75-.312-.22-.124-.44-.265-.65-.417a2.12 2.12 0 01-1.025-1.298c-.14-.4-.25-.82-.32-1.25-.06-.43-.09-.87-.09-1.31a6.68 6.68 0 01.35-2.07c.1-.37.23-.74.39-1.1s.35-.71.55-1.05a11.3 11.3 0 012.35-3.32c.5-.4.99-.79 1.48-1.18a7.84 7.84 0 013.2-1.63c.53-.1.9-.17 1.2-.26.3-.08.57-.16.85-.23.28-.07.56-.13.84-.19l.19-.04a6.22 6.22 0 011.3-1.6c.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3.1-.1.2-.2.3-.3a.5.5 0 01.5.5c0 .3-.1.6-.2.9s-.2.6-.3.9-.3.6-.4.9-.4.6-.5.9-.5.6-.6.9-.6.6-.7.9-.7.6-.8.9-.8.6-.9.9-.9.6-1 .9-1 .6-1.1.9-1.1.6-1.2.9-1.3.6-1.4.9-1.5.6-1.6.9a.5.5 0 01.5.5v.5c0 .2-.1.4-.2.6s-.2.4-.3.6-.3.4-.4.6-.4.4-.5.6-.5.4-.6.6-.6.4-.7.6-.7.4-.8.6-.8.4-.9.6-.9.4-1.1.6-1.1.4-1.2.6-1.2.4-1.3.6-1.4.4-1.5.6-1.6.4-1.7.6-1.8.4-1.9.6-2 .4-2.1.6-2.2.4-2.3.6a.5.5 0 01-.5.5c-.3-.2-.5-.4-.7-.6s-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6s-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6-.4-.4-.6-.6a.5.5 0 01-.5-.5v-1c0-.2.1-.4.2-.6s.2-.4.3-.6.3-.4.4-.6.4-.4.5-.6.5-.4.6-.6.6-.4.7-.6.7-.4.8-.6.8-.4.9-.6.9-.4 1.1-.6 1.1-.4 1.2-.6 1.2-.4 1.3-.6 1.4-.4 1.5-.6 1.6-.4 1.7-.6 1.8-.4 1.9-.6 2-.4 2.1-.6 2.2-.4 2.3-.6a.5.5 0 01.5.5zM12 21c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z" />
+                            </svg>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-green-500 transition-colors duration-200">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.308 11.237c-.328.053-.664.08-1.002.08-1.127 0-2.222-.26-3.21-.767-.988-.506-1.84-1.228-2.55-2.091-1.04-.6-1.92-1.39-2.61-2.29-.69-.9-.95-1.92-.85-2.95l-.01.01v-.01h.01c.21 1.05.57 2.06 1.08 3.01.51.95 1.15 1.84 1.94 2.65.64.65 1.35 1.25 2.13 1.78.78.53 1.6 1.02 2.47 1.45.87.43 1.76.8 2.65 1.14.89.34 1.78.63 2.65.86.87.23 1.74.39 2.58.48.84.09 1.66.11 2.45.06l.01.01v-.01c-.81.04-1.63.02-2.45-.06-.84-.09-1.67-.25-2.51-.48-.87-.23-1.74-.47-2.6-.86-.86-.34-1.72-.7-2.55-1.14-.78-.45-1.52-.94-2.21-1.46-.7-.52-1.35-1.11-1.94-1.78-.59-.67-1.11-1.4-1.56-2.2-.45-.8-.79-1.65-1.02-2.54-.23-.89-.35-1.81-.35-2.73.01-.9.15-1.8.42-2.67.27-.87.64-1.72 1.09-2.5.45-.78.99-1.51 1.62-2.18.63-.67 1.34-1.28 2.15-1.82.81-.54 1.69-1.02 2.62-1.43.93-.41 1.88-.75 2.84-1.01.96-.26 1.93-.45 2.89-.57.96-.12 1.92-.17 2.86-.17l-.01.01v-.01c-1.03-.02-2.06.07-3.07.28-.99.2-1.96.49-2.89.87-.93.38-1.83.85-2.69 1.42-.86.57-1.67 1.24-2.42 2.02-.75.78-1.43 1.65-2.05 2.61-.62.96-1.16 1.99-1.62 3.08-.46 1.09-.8 2.23-1.01 3.41-.21 1.18-.28 2.39-.21 3.6.07 1.21.27 2.41.6 3.59.33 1.18.78 2.33 1.34 3.42.56 1.09 1.23 2.12 2.01 3.07.78.95 1.66 1.83 2.63 2.64.97.81 2.02 1.54 3.16 2.18 1.14.64 2.33 1.18 3.58 1.62 1.25.44 2.53.76 3.82.95 1.29.19 2.58.26 3.84.21l-.01-.01v.01c-1.26.05-2.55.02-3.84.21-1.29-.19-2.57-.51-3.82-.95-1.25-.44-2.44-.98-3.58-1.62-1.14-.64-2.19-1.37-3.16-2.18-.97-.81-1.85-1.69-2.63-2.64-.78-.95-1.45-1.98-2.01-3.07-.56-1.09-1.01-2.24-1.34-3.42-.33-1.18-.53-2.38-.6-3.59-.07-1.21.01-2.41.21-3.6.2-1.19.54-2.33.99-3.41.45-1.08.99-2.11 1.62-3.07.63-.96 1.35-1.83 2.15-2.61.8-.78 1.69-1.45 2.62-2.02.93-.57 1.89-1.04 2.89-1.42.99-.38 1.96-.67 2.95-.87.96-.2 1.92-.29 2.88-.29.96 0 1.91.07 2.84.21l.01-.01v.01c-1.07.02-2.13.11-3.18.28-.99.16-1.96.41-2.9.75-.94.34-1.86.76-2.73 1.26-.87.5-1.7.99-2.47 1.57-.77.58-1.48 1.23-2.13 1.95-.65.72-1.23 1.51-1.74 2.37-.51.86-.94 1.79-1.28 2.76-.34.97-.55 1.97-.62 3.01-.07 1.04.01 2.08.24 3.09.23 1.01.59 1.97 1.08 2.87.49.9 1.07 1.76 1.74 2.56.67.8 1.4 1.55 2.19 2.25.79.7 1.64 1.34 2.53 1.91.89.57 1.83 1.08 2.79 1.53.96.45 1.94.84 2.94 1.17 1 .33 2.01.59 3.02.78 1.01.19 2.02.32 3.01.37.99.05 1.96.02 2.89-.09l.01-.01v.01z" /></svg>
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.308 11.237c-.328.053-.664.08-1.002.08-1.127 0-2.222-.26-3.21-.767-.988-.506-1.84-1.228-2.55-2.091-1.04-.6-1.92-1.39-2.61-2.29-.69-.9-.95-1.92-.85-2.95l-.01.01v-.01h.01c.21 1.05.57 2.06 1.08 3.01.51.95 1.15 1.84 1.94 2.65.64.65 1.35 1.25 2.13 1.78.78.53 1.6 1.02 2.47 1.45.87.43 1.76.8 2.65 1.14.89.34 1.78.63 2.65.86.87.23 1.74.39 2.58.48.84.09 1.66.11 2.45.06l.01.01v-.01c-.81.04-1.63.02-2.45-.06-.84-.09-1.67-.25-2.51-.48-.87-.23-1.74-.47-2.6-.86-.86-.34-1.72-.7-2.55-1.14-.78-.45-1.52-.94-2.21-1.46-.7-.52-1.35-1.11-1.94-1.78-.59-.67-1.11-1.4-1.56-2.2-.45-.8-.79-1.65-1.02-2.54-.23-.89-.35-1.81-.35-2.73.01-.9.15-1.8.42-2.67.27-.87.64-1.72 1.09-2.5.45-.78.99-1.51 1.62-2.18.63-.67 1.34-1.28 2.15-1.82.81-.54 1.69-1.02 2.62-1.43.93-.41 1.88-.75 2.84-1.01.96-.26 1.93-.45 2.89-.57.96-.12 1.92-.17 2.86-.17l-.01.01v-.01c-1.03-.02-2.06.07-3.07.28-.99.2-1.96.49-2.89.87-.93.38-1.83.85-2.69 1.42-.86.57-1.67 1.24-2.42 2.02-.75.78-1.43 1.65-2.05 2.61-.62.96-1.16 1.99-1.62 3.08-.46 1.09-.8 2.23-1.01 3.41-.21 1.18-.28 2.39-.21 3.6.07 1.21.27 2.41.6 3.59.33 1.18.78 2.33 1.34 3.42.56 1.09 1.23 2.12 2.01 3.07.78.95 1.66 1.83 2.63 2.64.97.81 2.02 1.54 3.16 2.18 1.14.64 2.33 1.18 3.58 1.62 1.25.44 2.53.76 3.82.95 1.29.19 2.58.26 3.84.21l-.01-.01v.01c-1.26.05-2.55.02-3.84.21-1.29-.19-2.57-.51-3.82-.95-1.25-.44-2.44-.98-3.58-1.62-1.14-.64-2.19-1.37-3.16-2.18-.97-.81-1.85-1.69-2.63-2.64-.78-.95-1.45-1.98-2.01-3.07-.56-1.09-1.01-2.24-1.34-3.42-.33-1.18-.53-2.38-.6-3.59-.07-1.21.01-2.41.21-3.6.2-1.19.54-2.33.99-3.41.45-1.08.99-2.11 1.62-3.07.63-.96 1.35-1.83 2.15-2.61.8-.78 1.69-1.45 2.62-2.02.93-.57 1.89-1.04 2.89-1.42.99-.38 1.96-.67 2.95-.87.96-.2 1.92-.29 2.88-.29.96 0 1.91.07 2.84.21l.01-.01v.01c-1.07.02-2.13.11-3.18.28-.99.16-1.96.41-2.9.75-.94.34-1.86.76-2.73 1.26-.87.5-1.7.99-2.47 1.57-.77.58-1.48 1.23-2.13 1.95-.65.72-1.23 1.51-1.74 2.37-.51.86-.94 1.79-1.28 2.76-.34.97-.55 1.97-.62 3.01-.07 1.04.01 2.08.24 3.09.23 1.01.59 1.97 1.08 2.87.49.9 1.07 1.76 1.74 2.56.67.8 1.4 1.55 2.19 2.25.79.7 1.64 1.34 2.53 1.91.89.57 1.83 1.08 2.79 1.53.96.45 1.94.84 2.94 1.17 1 .33 2.01.59 3.02.78 1.01.19 2.02.32 3.01.37.99.05 1.96.02 2.89-.09l.01-.01v.01z" />
+                            </svg>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-green-500 transition-colors duration-200">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.308 11.237c-.328.053-.664.08-1.002.08-1.127 0-2.222-.26-3.21-.767-.988-.506-1.84-1.228-2.55-2.091-1.04-.6-1.92-1.39-2.61-2.29-.69-.9-.95-1.92-.85-2.95l-.01.01v-.01h.01c.21 1.05.57 2.06 1.08 3.01.51.95 1.15 1.84 1.94 2.65.64.65 1.35 1.25 2.13 1.78.78.53 1.6 1.02 2.47 1.45.87.43 1.76.8 2.65 1.14.89.34 1.78.63 2.65.86.87.23 1.74.39 2.58.48.84.09 1.66.11 2.45.06l.01.01v-.01c-.81.04-1.63.02-2.45-.06-.84-.09-1.67-.25-2.51-.48-.87-.23-1.74-.47-2.6-.86-.86-.34-1.72-.7-2.55-1.14-.78-.45-1.52-.94-2.21-1.46-.7-.52-1.35-1.11-1.94-1.78-.59-.67-1.11-1.4-1.56-2.2-.45-.8-.79-1.65-1.02-2.54-.23-.89-.35-1.81-.35-2.73.01-.9.15-1.8.42-2.67.27-.87.64-1.72 1.09-2.5.45-.78.99-1.51 1.62-2.18.63-.67 1.34-1.28 2.15-1.82.81-.54 1.69-1.02 2.62-1.43.93-.41 1.88-.75 2.84-1.01.96-.26 1.93-.45 2.89-.57.96-.12 1.92-.17 2.86-.17l-.01.01v-.01c-1.03-.02-2.06.07-3.07.28-.99.2-1.96.49-2.89.87-.93.38-1.83.85-2.69 1.42-.86.57-1.67 1.24-2.42 2.02-.75.78-1.43 1.65-2.05 2.61-.62.96-1.16 1.99-1.62 3.08-.46 1.09-.8 2.23-1.01 3.41-.21 1.18-.28 2.39-.21 3.6.07 1.21.27 2.41.6 3.59.33 1.18.78 2.33 1.34 3.42.56 1.09 1.23 2.12 2.01 3.07.78.95 1.66 1.83 2.63 2.64.97.81 2.02 1.54 3.16 2.18 1.14.64 2.33 1.18 3.58 1.62 1.25.44 2.53.76 3.82.95 1.29.19 2.58.26 3.84.21l-.01-.01v.01c-1.26.05-2.55.02-3.84.21-1.29-.19-2.57-.51-3.82-.95-1.25-.44-2.44-.98-3.58-1.62-1.14-.64-2.19-1.37-3.16-2.18-.97-.81-1.85-1.69-2.63-2.64-.78-.95-1.45-1.98-2.01-3.07-.56-1.09-1.01-2.24-1.34-3.42-.33-1.18-.53-2.38-.6-3.59-.07-1.21.01-2.41.21-3.6.2-1.19.54-2.33.99-3.41.45-1.08.99-2.11 1.62-3.07.63-.96 1.35-1.83 2.15-2.61.8-.78 1.69-1.45 2.62-2.02.93-.57 1.89-1.04 2.89-1.42.99-.38 1.96-.67 2.95-.87.96-.2 1.92-.29 2.88-.29.96 0 1.91.07 2.84.21l.01-.01v.01c-1.07.02-2.13.11-3.18.28-.99.16-1.96.41-2.9.75-.94.34-1.86.76-2.73 1.26-.87.5-1.7.99-2.47 1.57-.77.58-1.48 1.23-2.13 1.95-.65.72-1.23 1.51-1.74 2.37-.51.86-.94 1.79-1.28 2.76-.34.97-.55 1.97-.62 3.01-.07 1.04.01 2.08.24 3.09.23 1.01.59 1.97 1.08 2.87.49.9 1.07 1.76 1.74 2.56.67.8 1.4 1.55 2.19 2.25.79.7 1.64 1.34 2.53 1.91.89.57 1.83 1.08 2.79 1.53.96.45 1.94.84 2.94 1.17 1 .33 2.01.59 3.02.78 1.01.19 2.02.32 3.01.37.99.05 1.96.02 2.89-.09l.01-.01v.01z" /></svg>
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.308 11.237c-.328.053-.664.08-1.002.08-1.127 0-2.222-.26-3.21-.767-.988-.506-1.84-1.228-2.55-2.091-1.04-.6-1.92-1.39-2.61-2.29-.69-.9-.95-1.92-.85-2.95l-.01.01v-.01h.01c.21 1.05.57 2.06 1.08 3.01.51.95 1.15 1.84 1.94 2.65.64.65 1.35 1.25 2.13 1.78.78.53 1.6 1.02 2.47 1.45.87.43 1.76.8 2.65 1.14.89.34 1.78.63 2.65.86.87.23 1.74.39 2.58.48.84.09 1.66.11 2.45.06l.01.01v-.01c-.81.04-1.63.02-2.45-.06-.84-.09-1.67-.25-2.51-.48-.87-.23-1.74-.47-2.6-.86-.86-.34-1.72-.7-2.55-1.14-.78-.45-1.52-.94-2.21-1.46-.7-.52-1.35-1.11-1.94-1.78-.59-.67-1.11-1.4-1.56-2.2-.45-.8-.79-1.65-1.02-2.54-.23-.89-.35-1.81-.35-2.73.01-.9.15-1.8.42-2.67.27-.87.64-1.72 1.09-2.5.45-.78.99-1.51 1.62-2.18.63-.67 1.34-1.28 2.15-1.82.81-.54 1.69-1.02 2.62-1.43.93-.41 1.88-.75 2.84-1.01.96-.26 1.93-.45 2.89-.57.96-.12 1.92-.17 2.86-.17l-.01.01v-.01c-1.03-.02-2.06.07-3.07.28-.99.2-1.96.49-2.89.87-.93.38-1.83.85-2.69 1.42-.86.57-1.67 1.24-2.42 2.02-.75.78-1.43 1.65-2.05 2.61-.62.96-1.16 1.99-1.62 3.08-.46 1.09-.8 2.23-1.01 3.41-.21 1.18-.28 2.39-.21 3.6.07 1.21.27 2.41.6 3.59.33 1.18.78 2.33 1.34 3.42.56 1.09 1.23 2.12 2.01 3.07.78.95 1.66 1.83 2.63 2.64.97.81 2.02 1.54 3.16 2.18 1.14.64 2.33 1.18 3.58 1.62 1.25.44 2.53.76 3.82.95 1.29.19 2.58.26 3.84.21l-.01-.01v.01c-1.26.05-2.55.02-3.84.21-1.29-.19-2.57-.51-3.82-.95-1.25-.44-2.44-.98-3.58-1.62-1.14-.64-2.19-1.37-3.16-2.18-.97-.81-1.85-1.69-2.63-2.64-.78-.95-1.45-1.98-2.01-3.07-.56-1.09-1.01-2.24-1.34-3.42-.33-1.18-.53-2.38-.6-3.59-.07-1.21.01-2.41.21-3.6.2-1.19.54-2.33.99-3.41.45-1.08.99-2.11 1.62-3.07.63-.96 1.35-1.83 2.15-2.61.8-.78 1.69-1.45 2.62-2.02.93-.57 1.89-1.04 2.89-1.42.99-.38 1.96-.67 2.95-.87.96-.2 1.92-.29 2.88-.29.96 0 1.91.07 2.84.21l.01-.01v.01c-1.07.02-2.13.11-3.18.28-.99.16-1.96.41-2.9.75-.94.34-1.86.76-2.73 1.26-.87.5-1.7.99-2.47 1.57-.77.58-1.48 1.23-2.13 1.95-.65.72-1.23 1.51-1.74 2.37-.51.86-.94 1.79-1.28 2.76-.34.97-.55 1.97-.62 3.01-.07 1.04.01 2.08.24 3.09.23 1.01.59 1.97 1.08 2.87.49.9 1.07 1.76 1.74 2.56.67.8 1.4 1.55 2.19 2.25.79.7 1.64 1.34 2.53 1.91.89.57 1.83 1.08 2.79 1.53.96.45 1.94.84 2.94 1.17 1 .33 2.01.59 3.02.78 1.01.19 2.02.32 3.01.37.99.05 1.96.02 2.89-.09l.01-.01v.01z" />
+                            </svg>
                         </a>
                     </div>
-                </div>
-
-
-                <!-- Newsletter Signup -->
-                <div class="flex flex-col items-center lg:items-start">
-                    <h4 class="text-xl font-semibold mb-4 text-green-400">Stay Connected</h4>
-                    <p class="text-gray-400 text-center lg:text-left mb-4">Get the latest farm news and updates straight to your inbox.</p>
-                    <form action="#" method="POST" class="w-full">
-                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-2 w-full">
-                            <input type="email" placeholder="Your email address" aria-label="Email Address"
-                                   class="flex-grow p-3 rounded-xl border border-gray-700 bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                            <button type="submit"
-                                    class="p-3 rounded-xl bg-green-600 hover:bg-green-700 transition-colors duration-200 text-white font-medium shadow-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
                 </div>
 
             </div>
 
             <!-- Copyright and Credits -->
             <div class="text-center text-gray-500 pt-10 text-sm">
-                &copy; 2025  GreenField Farms. All rights reserved.
+                &copy; 2025 GreenField Farms. All rights reserved.
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>
