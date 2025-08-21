@@ -40,9 +40,12 @@
     <!-- Header & Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-green-600">
-                GreenField Farms
-            </a>
+            <div class="flex">
+                <img src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-agriculture-logo-template-farm-logo-template-png-image_5180811.jpg" class="w-24 h-24 sm:w-22 sm:h-22 rounded-full  object-cover shadow-md">
+                <a href="index.html" class="text-2xl font-bold text-green-600 mt-8 ml-2">
+                    GreenField Farms
+                </a>
+            </div>
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-8">
                 <a href="index.html" class="nav-link text-gray-600 hover:text-green-600 border-b-2 border-transparent hover:border-green-500 pb-1 transition">Home</a>
@@ -208,34 +211,150 @@
             <section id="team" class="py-20 bg-white">
                 <div class="container mx-auto px-6">
                     <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-gray-800">Meet the Farmers</h2>
+                        <h2 class="text-4xl font-bold text-gray-800">Meet the Team</h2>
                         <p class="text-gray-600 mt-2">The family behind the food.</p>
                     </div>
-                    <!-- Team Member Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Member 1 -->
-                        <div class="bg-gray-100 rounded-2xl p-6 text-center shadow-lg transition-transform transform hover:scale-105 duration-300">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRuqpG3ELYTK6hT2YSQAvh3pwFT-dIMic5YA&s" class="w-36 h-36 mx-auto rounded-full mb-4 object-cover border-4 border-green-500" alt="James Davis">
-                            <h3 class="text-xl font-semibold text-gray-900">James Davis</h3>
-                            <p class="text-green-700 font-medium mb-2">Founder & Head Farmer</p>
-                            <p class="text-gray-600">With over three decades of experience, James is the heart of the farm, overseeing all aspects of our organic production.</p>
-                        </div>
-                        <!-- Member 2 -->
-                        <div class="bg-gray-100 rounded-2xl p-6 text-center shadow-lg transition-transform transform hover:scale-105 duration-300">
-                            <img src="https://media.istockphoto.com/id/1394347322/photo/confident-black-businesswoman-working-in-an-office-alone.jpg?s=612x612&w=0&k=20&c=zB6tQt-Zfps0KLU0MP6u-BEl8VvUAgXG-ZHX8zSXAUA=" class="w-36 h-36 mx-auto rounded-full mb-4 object-cover border-4 border-green-500" alt="Eleanor Davis">
-                            <h3 class="text-xl font-semibold text-gray-900">Eleanor Davis</h3>
-                            <p class="text-green-700 font-medium mb-2">Operations & Community Outreach</p>
-                            <p class="text-gray-600">Eleanor manages the business side and loves connecting with our community at local farmers' markets.</p>
-                        </div>
-                        <!-- Member 3 -->
-                        <div class="bg-gray-100 rounded-2xl p-6 text-center shadow-lg transition-transform transform hover:scale-105 duration-300">
-                            <img src="https://media.istockphoto.com/id/2099407167/photo/confident-young-businesswoman-standing-in-front-of-a-white-office-wall.jpg?s=612x612&w=0&k=20&c=69qp5dnMoaNMIjSeqlXdgUCZ56Dx231RvfxGUaCDcx0=" class="w-36 h-36 mx-auto rounded-full mb-4 object-cover border-4 border-green-500" alt="Michael Davis">
-                            <h3 class="text-xl font-semibold text-gray-900">Michael Davis</h3>
-                            <p class="text-green-700 font-medium mb-2">Field Manager & Next-Gen Farmer</p>
-                            <p class="text-gray-600">Michael, James and Eleanor's son, brings new ideas and technology to ensure our farm stays innovative and efficient.</p>
-                        </div>
-                    </div>
-                </div>
+ <!-- Organogram Section -->
+ <section class="mb-12 lg:mb-16">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8">Durosinmi Elias's Team</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+
+        <!-- Group Leader -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-orange-500">
+            <img src="https://placehold.co/150x150/F97316/FFFFFF?text=Group+Leader" alt="Image of Lawal Nasiru" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Lawal Nasiru</h3>
+            <p class="text-sm text-gray-600 font-bold">Group Leader</p>
+        </div>
+
+        <!-- Team Members (Loop through remaining members) -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Durosinmi Elias" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Durosinmi Elias</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Amoo Kaozarat" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Amoo Kaozarat</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Adepoju Ibrahim" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Adepoju Ibrahim</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Abubakar Muhammad" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Abubakar Muhammad</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Adheke Eloho" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Adheke Eloho</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Yakub Ganiyat" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Yakub Ganiyat</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Daniel Onoriode" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Daniel Onoriode</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Esan Olawale" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Esan Olawale</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ighalo Victor" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Ighalo Victor</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Collins Enoseje" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Collins Enoseje</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Idris Ibrahim" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Idris Ibrahim</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Obajobi Abiola" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Obajobi Abiola</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Akanbi Olorunfemi" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Akanbi Olorunfemi</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ejele Samson" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Ejele Samson</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Blessing Chinaza" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Blessing Chinaza</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Jack Victor" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Jack Victor</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Galadima Dahiru" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Galadima Dahiru</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Saidu Hussaini" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Saidu Hussaini</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Usman Saminu" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Usman Saminu</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Etukudoh Nathan" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Etukudoh Nathan</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Fateru Israel" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Fateru Israel</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Williams Utibe" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Williams Utibe</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ajiboye Ayotomiwa" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Ajiboye Ayotomiwa</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Philip-Solomon Favour" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Philip-Solomon Favour</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
+            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ochigbo Precious" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900">Ochigbo Precious</h3>
+            <p class="text-sm text-gray-600">Team Member</p>
+        </div>
+
+    </div>
+</section>
             </section>
 
     </main>
@@ -247,7 +366,10 @@
 
                 <!-- Company Info -->
                 <div class="flex flex-col items-center lg:items-start">
-                    <h3 class="text-3xl font-bold text-white mb-4"> GreenField Farms</h3>
+                    <div class=" flex  mb-2">
+                        <img src="https://png.pngtree.com/png-clipart/20200727/original/pngtree-agriculture-logo-template-farm-logo-template-png-image_5180811.jpg" class="w-24 h-24 sm:w-22 sm:h-22 rounded-full  object-cover shadow-md">
+                        <h3 class="text-3xl mt-8 ml-3 font-bold text-white mb-4"> GreenField Farms</h3>
+                    </div>
                     <p class="text-gray-400 text-center lg:text-left">Cultivating a healthier future, one harvest at a time.</p>
                     <div class="flex space-x-4 mt-6">
                         <!-- Social Media Icons (using SVG for styling) -->
