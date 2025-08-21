@@ -13,6 +13,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
       
         /* The mobile menu toggle logic */
@@ -29,6 +30,86 @@
         }
         #mobile-menu-toggle:not(:checked) ~ header #close-icon {
             display: none;
+        }
+        .node-card {
+            min-width: 250px;
+        }
+        .organogram-container {
+            position: relative;
+        }
+
+        /* Common styles for all connectors */
+        .org-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 2rem;
+            border-left: 2px solid #4b5563; /* Gray-700 */
+            transform: translateX(-50%);
+        }
+
+        /* The main horizontal line below the executive team */
+        .executive-team-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-top: 2rem;
+        }
+        .executive-team-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 2rem;
+            border-left: 2px solid #4b5563; /* Gray-700 */
+            transform: translateX(-50%);
+        }
+        .executive-team-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+            border-top: 2px solid #4b5563; /* Gray-700 */
+        }
+        
+        /* The horizontal line for department sections */
+        .departments-wrapper {
+            position: relative;
+            padding-top: 2rem;
+        }
+        .departments-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -48px;
+            left: 60%;
+            height: 5rem;
+            border-left: 2px solid #4b5563; /* Gray-700 */
+            transform: translateX(-50%);
+        }
+        .departments-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            right: 0;
+            border-top: 2px solid #4b5563; /* Gray-700 */
+        }
+
+        /* Connectors for individual cards within a section */
+        .node-card-wrapper {
+            position: relative;
+            padding-top: 2rem;
+        }
+        .node-card-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 2rem;
+            border-left: 2px solid #4b5563; /* Gray-700 */
+            transform: translateX(-50%);
         }
     </style>
 </head>
@@ -207,155 +288,85 @@
         </div>
     </section>
 
-            <!-- Meet the Farmers Section -->
-            <section id="team" class="py-20 bg-white">
-                <div class="container mx-auto px-6">
+            <div class="bg-gray-100 text-gray-800 p-4 sm:p-8">
+
+                <div class="container mx-auto organogram-container">
                     <div class="text-center mb-12">
-                        <h2 class="text-4xl font-bold text-gray-800">Meet the Team</h2>
-                        <p class="text-gray-600 mt-2">The family behind the food.</p>
+                        <h2 class="text-3xl font-bold mb-2">
+                            <span class="text-green-600">🌾</span> Our Business Organogram
+                        </h2>
+                        <p class="text-lg text-gray-600">A look at the structure that powers our sustainable growth.</p>
                     </div>
- <!-- Organogram Section -->
- <section class="mb-12 lg:mb-16">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
-
-        <!-- Group Leader -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-orange-500">
-            <img src="https://placehold.co/150x150/F97316/FFFFFF?text=Group+Leader" alt="Image of Lawal Nasiru" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Lawal Nasiru</h3>
-            <p class="text-sm text-gray-600 font-bold">Group Leader</p>
-        </div>
-
-        <!-- Team Members (Loop through remaining members) -->
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Durosinmi Elias" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Durosinmi Elias</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Amoo Kaozarat" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Amoo Kaozarat</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Adepoju Ibrahim" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Adepoju Ibrahim</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Abubakar Muhammad" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Abubakar Muhammad</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Adheke Eloho" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Adheke Eloho</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Yakub Ganiyat" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Yakub Ganiyat</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Daniel Onoriode" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Daniel Onoriode</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Esan Olawale" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Esan Olawale</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ighalo Victor" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Ighalo Victor</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Collins Enoseje" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Collins Enoseje</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Idris Ibrahim" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Idris Ibrahim</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Obajobi Abiola" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Obajobi Abiola</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Akanbi Olorunfemi" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Akanbi Olorunfemi</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ejele Samson" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Ejele Samson</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Blessing Chinaza" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Blessing Chinaza</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Jack Victor" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Jack Victor</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Galadima Dahiru" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Galadima Dahiru</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Saidu Hussaini" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Saidu Hussaini</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Usman Saminu" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Usman Saminu</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Etukudoh Nathan" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Etukudoh Nathan</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Fateru Israel" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Fateru Israel</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Williams Utibe" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Williams Utibe</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ajiboye Ayotomiwa" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Ajiboye Ayotomiwa</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Philip-Solomon Favour" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Philip-Solomon Favour</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm w-full transition-transform transform hover:scale-105 duration-300 border-t-4 border-green-600">
-            <img src="https://placehold.co/150x150/22c55e/FFFFFF?text=Team+Member" alt="Image of Ochigbo Precious" class="w-24 h-24 sm:w-32 sm:h-32 rounded-full mb-4 object-cover border-4 border-white shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">Ochigbo Precious</h3>
-            <p class="text-sm text-gray-600">Team Member</p>
-        </div>
-
-    </div>
-</section>
-            </section>
-
+            
+                    <div class="relative z-10 flex flex-col items-center">
+                        <!-- Executive Leadership Section -->
+                        <section class="mb-12 w-full">
+                            <h2 class="text-2xl font-bold text-center text-gray-900 mb-6">
+                                <span class="text-orange-500">🏢</span> Executive Leadership
+                            </h2>
+                            <!-- CEO Card -->
+                            <div id="ceo" class="flex justify-center ">
+                                <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
+                                    <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Executive Officer (CEO)</h3>
+                                    <p class="text-sm text-gray-500">Oversees overall strategy, partnerships, and growth.</p>
+                                </div>
+                            </div>
+                            <!-- Other Executive Cards with Connector Line -->
+                            <div class="executive-team-wrapper flex flex-wrap justify-center gap-6" id="executive-team">
+                                <div class="node-card-wrapper">
+                                    <div id="cto" class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
+                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Technology Officer (CTO)</h3>
+                                        <p class="text-sm text-gray-500">Leads website development, tech infrastructure, and innovation.</p>
+                                    </div>
+                                </div>
+                                <div class="node-card-wrapper">
+                                    <div id="coo" class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-orange-500 transform transition-transform duration-300 hover:scale-105">
+                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Operating Officer (COO)</h3>
+                                        <p class="text-sm text-gray-500">Manages day-to-day operations and team coordination.</p>
+                                    </div>
+                                </div>
+                                <div class="node-card-wrapper">
+                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-cyan-600 transform transition-transform duration-300 hover:scale-105">
+                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Chief Legal Officer</h3>
+                                        <p class="text-sm text-gray-500">Ensures compliance with agricultural and digital laws.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+            
+                        <!-- Agricultural Operations Section -->
+                        <section class="mb-12 w-full departments-wrapper">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div class="node-card-wrapper">
+                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-lime-600 transform transition-transform duration-300 hover:scale-105">
+                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Farm Manager</h3>
+                                        <p class="text-sm text-gray-500">Supervises crop production, livestock, and field staff.</p>
+                                    </div>
+                                </div>
+                                <div class="node-card-wrapper">
+                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-blue-600 transform transition-transform duration-300 hover:scale-105">
+                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">E-commerce Manager</h3>
+                                        <p class="text-sm text-gray-500">Oversees online sales, payment systems, and customer orders.</p>
+                                    </div>
+                                </div>
+                                <div class="node-card-wrapper">
+                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-lime-600 transform transition-transform duration-300 hover:scale-105">
+                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Supply Chain Manager</h3>
+                                        <p class="text-sm text-gray-500">Handles logistics, storage, and distribution of produce.</p>
+                                    </div>
+                                </div>
+                                <div class="node-card-wrapper">
+                                    <div class="node-card bg-white rounded-xl shadow-lg p-6 border-t-4 border-cyan-600 transform transition-transform duration-300 hover:scale-105">
+                                        <h3 class="text-xl font-semibold mb-1 text-gray-900">Finance Manager</h3>
+                                        <p class="text-sm text-gray-500">Manages budgets, payroll, and financial reporting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            
+            </div>
     </main>
 
     <!-- Footer Section -->
